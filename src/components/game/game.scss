@@ -1,0 +1,32 @@
+.gameWrapper {
+	width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 8px;
+	background-color: aliceblue;
+	.progressBar {
+		height: 12px;
+		background-color: #d62957;
+		border-radius: 4px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+
+	ul {
+		padding: 0;
+		li {
+			padding: 10px;
+			border: 1px solid rgb(159, 156, 156);
+			border-radius: 5px;
+			margin: 10px;
+			cursor: pointer;
+			letter-spacing: 0.4px;
+			font-size: 19px;
+			transition: all 0.5s ease-in;
+			&:hover {
+				border: 1px solid rgb(98, 97, 97);
+			}
+		}
+	}
+}

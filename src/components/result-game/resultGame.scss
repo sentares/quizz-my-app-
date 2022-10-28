@@ -1,0 +1,47 @@
+.resultWrapper {
+	width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 8px;
+	background-color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		max-width: 200px;
+		height: 200px;
+	}
+
+	h3 {
+		font-size: 23px;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+
+		strong {
+			font-size: 26px;
+			color: rgb(230, 40, 135);
+		}
+	}
+
+	button {
+		width: 200px;
+		padding: 10px 10px;
+		cursor: pointer;
+		border-radius: 5px;
+		outline: none;
+		border: none;
+		background: rgb(240, 63, 152);
+		margin: 10px 0;
+		color: whitesmoke;
+		font-size: 20px;
+		font-weight: bold;
+		transition: all 0.5s ease-in;
+		&:hover {
+			-webkit-box-shadow: -7px 11px 8px 0px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: -7px 11px 8px 0px rgba(0, 0, 0, 0.2);
+			box-shadow: -7px 11px 8px 0px rgba(0, 0, 0, 0.2);
+		}
+	}
+}

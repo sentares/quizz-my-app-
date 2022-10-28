@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { Game } from './components/game/game'
+import { ResultGame } from '../src/components/result-game/resultGame'
+import { allQuestions } from './questions'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	const [doneGame, setDoneGame] = useState(0)
+	const [correctlyApp, setCorrectApp] = useState(0)
+
+	const isDoneGame = () => {
+		setDoneGame(doneGame + 1)
+	}
+
+	return (
+		<div className='app'>
+			{doneGame !== allQuestions.length ? (
+				<Game
+					isDoneGame={isDoneGame}
+					correctlyApp={correctlyApp}
+					setCorrectApp={setCorrectApp}
+				/>
+			) : (
+				<ResultGame correctlyApp={correctlyApp} />
+			)}
+		</div>
+	)
 }
 
-export default App;
+export default App
